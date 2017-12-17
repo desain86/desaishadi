@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<head lang="en">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>I&amp;U Wedding HTML Portfolio Template </title>
+    <!-- Framework CSS -->
+    <link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="assets/scripts/jquery.js"></script>
+    <script type="text/javascript" src="assets/scripts/jquery-ui.custom.min.js"></script>
+
+    <script type="text/javascript" src="assets/scripts/shCore.js"></script>
+    <script type="text/javascript" src="assets/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="assets/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="assets/scripts/shBrushPhp.js"></script>
+    <script type="text/javascript" src="assets/scripts/shBrushXml.js"></script>
+    <link type="text/css" rel="stylesheet" href="assets/blueprint-css/shCoreDefault.css" />
+
+    <!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+    <link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+    <script type="text/javascript">
+        (function ($) {
+            $(document).ready(function () {
+                // Cache selectors
+                var lastId,
+                    topMenu = $(".menu .alpha"),
+                    topMenuHeight = topMenu.outerHeight() + 15,
+                    // All list items
+                    menuItems = topMenu.find("a"),
+                    canUpdateURL = typeof history.pushState === "function" ? true : false,
+                    // Anchors corresponding to menu items
+                    scrollItems = menuItems.map(function () {
+                        var item = $($(this).attr("href"));
+                        if (item.length) {
+                            return item;
+                        }
+                    });
+
+                // Bind click handler to menu items
+                // so we can get a fancy scroll animation
+                menuItems.click(function (e) {
+                    var href = $(this).attr("href"),
+                        offsetTop = $(href).offset().top - topMenuHeight + 1;
+
+                    $('html, body').stop().animate({
+                        scrollTop: offsetTop
+                    }, 300);
+                    e.preventDefault();
+                });
+
+                // Bind to scroll
+                $(window).scroll(function () {
+                    // Get container scroll position
+                    var fromTop = $(this).scrollTop() + topMenuHeight;
+
+                    // Get id of current scroll item
+                    var cur = scrollItems.map(function () {
+                        if ($(this).offset().top < fromTop)
+                            return this;
+                    });
+                    // Get the id of the current element
+                    cur = cur[cur.length - 1];
+                    var id = cur && cur.length ? cur[0].id : "";
+
+                    if (lastId !== id) {
+                        lastId = id;
+                        // Set/remove active class
+                        menuItems
+                            .parents('li').removeClass("active").end()
+                            .filter("[href=#" + id + "]").parent('li').addClass("active")
+                            .parents('li').addClass('active');
+
+                        if (canUpdateURL) {
+                            history.pushState(null, null, window.location.href.split('#').shift() + '#' + id);
+                        } else {
+                            var $section = $('#' + id);
+
+                            $section.attr('id', '');
+                            window.location.hash = '#' + id;
+                            $section.attr('id', id);
+                        }
+                    }
+                });
+
+                hashname = window.location.hash.replace('#', '');
+
+                $('.menu li').removeClass('active');
+                $('.menu li a[href=#' + hashname + ']')
+                    .parent('li').addClass('active')
+                    .parents('li').addClass('active');
+
+                elem = $('#' + hashname);
+
+                if (hashname.length > 1) {
+                    $('body, html').animate({
+                        scrollTop: $(elem).offset().top - topMenuHeight - 315
+                    }, 500, 'easeInOutCubic');
+                };
+            })
+        })(jQuery);
+    </script>
+</head>
+
+
+<body>
+    <div class="docs-header-bg">
+        <div class="docs-header">
+
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="logo.png">
+            </div>
+
+            <h1 class="center">Documentation</h1>
+
+            <p>A Complete Guide of  I&amp;U Wedding HTML Portfolio Template</p>
+            <div>
+                <a href="http://themeforest.net/user/themesitem" target="_blank" class="header-button">Support</a>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+
+        <!--      Section       -->
+
+        <!-- 		<h2 id="toc" class="alt">Table of Contents</h2> -->
+
+        <div class="menu">
+            <ol class="alpha">
+                <li><a href="#information">General Info</a>
+                <li><a href="#folder-struc">Folder Structure</a></li>
+                <li><a href="#how-to">How To?</a></li>
+                <li><a href="#credits">Credits</a>
+                </li>
+
+                <!--
+		<li><a href="#woocommerce">Snippets</a>
+			<ol>
+				<li><a href="#productSettings">Additional product settings</a></li>
+				<li><a href="#productCategorySettings">Products category settings</a></li>
+			</ol>
+		</li>
+-->
+
+            </ol>
+        </div>
+
+
+        <h3 id="information"><strong>General Informations</strong> - <a href="#information">top</a></h3>
+
+		<p> I&amp;U Wedding HTML Portfolio Template is a uniquely HTML template develop in HTML with a modern look.
+HTML files are well organized and named accordingly so its very easy to customize and update.
+Total 04 HTML files have been included.</p>
+
+
+
+        <hr>
+
+        <div class="subitems">
+
+            <h3 id="folder-struc"><strong>HTML Folder Structure</strong> - <a href="#information">top</a></h3>
+            <ul class="folder-struc">
+                <li class="file folder">Documentation</li>
+				<ul class="margin-left">
+					<li class="file folder">assets</li>
+					<li class="file page">index</li>
+				</ul>
+                <li class="file folder">HTML</li>
+            </ul>
+            <ul class="folder-struc margin-left">
+                <li class="file folder">css</li>
+                <li class="file folder">fonts</li>
+                <li class="file folder">images</li>
+                <li class="file folder">js</li>
+				<li class="file page">index.html</li>
+                <li class="file page">index_video.html</li>
+                <li class="file page">index_perallax.html</li>
+                <li class="file page">index2.html</li>
+                
+            </ul>
+
+            <hr>
+
+            <!--      Section       -->
+
+            <h3 id="how-to"><strong>How To?</strong> - <a href="#information">top</a></h3>
+
+
+            <h6 id="#edittext">How to logo change in HTML?</h6>
+            <p>Just write here your logo line in 149 </p>
+            <img src="assets/images/logo-change.png"/>
+            <br /><br />
+            
+             <h6 id="#edittext">How to slider images change in HTML?</h6>
+            <p>Just write here your slider images line in 1st images line 28, 2nd images line 63,3rd images line 98. </p>
+            <img src="assets/images/slider-img.png"/>
+            <br /><br />
+            
+            <h6 id="#edittext">How to change right social media icon and link in HTML?</h6>
+            <p>Just write here your social links and icon start index.html page 1st 181 line, 2nd 202 line, 3rd 586 line, 4th 595 line,. </p>
+            <img src="assets/images/social-icon.png" />
+            <br /><br />
+            
+            <h6 id="#edittext">How to video change in js?</h6>
+            <p>Just write here your video change main js line 230. </p>
+            <img src="assets/images/js-video.png"/>
+            <br /><br />
+            
+            <h6 id="#edittext">How to Count Down change in js?</h6>
+            <p>Just write here your Count Down change main js line 226. </p>
+            <img src="assets/images/count-down.png"/>
+            <br /><br />
+            
+            <hr>
+
+            <!-- Credits -->
+            <h3 id="credits"><strong>Sources and Credits</strong> - <a href="#information">top</a></h3>
+
+           <div class="narrow-p">
+
+        <p><strong>Free fonts:</strong></p>
+
+        <ul>			
+			<li><a href="https://fonts.google.com/specimen/Raleway" target="_blank"> Raleway</a></li>
+        	<li><a href="https://fonts.google.com/specimen/Great+Vibes" target="_blank"> Great Vibes, cursive</a></li>
+        </ul>
+		  <hr class="space">
+		<p><strong>Icons:</strong></p>
+
+        <ul>			
+			<li><a href=http://fontawesome.io/ target="_blank">Font Awesome</a> (Icons)</li>
+            <li><a href=http://www.flaticon.com/ target="_blank">flaticon</a> (Icons)</li>
+        </ul>
+		
+        <hr class="space">
+
+        
+
+       
+
+        <hr class="space">
+
+        <p>All images have been used for demonstration purposes only and are not included in the template.</p>
+
+        <hr class="space">
+
+        <!-- Credits -->
+
+        <p><strong>Support:</strong> If you need any help using the file or need special customizing please feel free to contact me via my Themeforest profile. If you have a moment, please rate this item, I’ll appreciate it very much!….Thank you.</p>
+		<p>I am always happy to help you. Please, contact me from my profile page.</p>
+
+        <hr class="space">
+
+        </div>
+
+
+    </div>
+    </div>
+    <!-- end div .container -->
+
+</body>
+
+</html>
