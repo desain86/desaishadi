@@ -215,9 +215,11 @@ aside {
 
 /*---Header / #myCarousel (with slider)---*/
 
+
+
 header {
 	position: relative;  
-	color: white;
+	color: rgb(201, 103, 91);
 	width: 100%;
 	min-height: auto;
 	text-align: center;
@@ -230,10 +232,14 @@ header {
 .item,
 .active {
     height: 100%;
+
+
 }
+
 
 .carousel-inner {
     height: 100%;
+
 }
 
 .carousel-fade .carousel-inner .item {
@@ -270,11 +276,14 @@ header {
 .fill {
     width: 100%;
     height: 100%;
+    background-color: rgb(255, 255, 240);
     background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+    -o-background-size: contain;
+    background-repeat: no-repeat;
+    
 }
 
 @media (min-width: 768px) {
@@ -290,6 +299,7 @@ header {
     position: absolute;
     bottom: 0;
     width: 100%;
+    padding-bottom: 3%;
 }
 
 /*---countdown Timer---*/
@@ -303,7 +313,7 @@ header {
     padding: 15px 12px 0px 12px;
     text-align: center;
 	background: rgba(172, 215, 228, 0.9);
-	color: rgb(255, 255, 240);
+	color: rgb(201, 103, 91);
    -webkit-border-radius: 5px;
    -moz-border-radius: 5px;
    -o-border-radius: 5px;
@@ -340,7 +350,7 @@ header {
 	color:#927c46;
 }
 .white{
-	color:#fff;
+	color:#fffff0;
 }
 .lightgray {
     color: #ccc;
@@ -970,12 +980,14 @@ body{
 	font-size:100%;
 }
 
+.countdown-timer {
+    bottom: -2%;
+}
 
 .countdown-timer .timer_box {
     width: 70px ;
     height: 80px ;
     background: rgba(172, 215, 228, 0.9);
-	color: rgb(255, 255, 240);
    -webkit-border-radius: 5px;
    -moz-border-radius: 5px;
    -o-border-radius: 5px;
@@ -990,6 +1002,13 @@ body{
     margin-top:15px;
 }
 
+.header_desc {
+    position: absolute;
+    bottom: 2%;
+    right: 10%;
+    text-align: right;
+    padding-top: 15%;
+}
 
 /*---Our story timeline---*/
 section.timeline .timeline-date h2 {
@@ -1024,9 +1043,7 @@ section.timeline .post-content {
 
 /*---countdown Timer---*/
 
-.countdown-timer {
-    bottom: -60px;
-}
+
 
 }
 
@@ -1059,6 +1076,14 @@ section.timeline .post-content {
 .countdown-timer {
     bottom: 0px;
 }
+
+.header_desc {
+    position: absolute;
+    top: 2px;
+    text-align: center;
+    padding-top: 0;
+}
+
 
 }
 
