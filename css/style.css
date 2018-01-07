@@ -64,7 +64,8 @@ html,
 	  width: 100%;
 	}
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Satisfy', cursive;
+	font-weight: 400;
 }
 body {
 	color:#444444;
@@ -87,10 +88,20 @@ h3,
 h4,
 h5,
 h6 {
-  	font-family: 'Special Elite', cursive;
-  	font-weight: 400;
+  	
+  	
    	line-height: 1.2;
-   	margin: 0.5em 0;
+   	margin: 0.25em 0;
+}
+
+h1,h2,h3{
+	font-weight: 400;
+	font-family: 'Engagement', cursive;
+}
+
+h4,h5,h6{
+	font-weight: 400;
+	font-family: 'Satisfy', cursive;
 }
 
 /* h1, h2, h3, h4 {
@@ -975,8 +986,8 @@ footer .img-responsive{
 }
 
 @media only screen and (max-width: 991px) {
-body{
-	font-size:100%;
+html{
+	font-size: .73em;
 }
 .navbar-collapse{
 	overflow:auto !important;
@@ -1003,7 +1014,7 @@ section.timeline .post-content {
 
 @media only screen and (max-width: 767px) {
 body{
-	font-size:100%;
+	
 }
 
 
@@ -1011,7 +1022,7 @@ body{
 
 .header_desc {
     position: absolute;
-    bottom: 150px;
+    bottom: 7.75em;
     right: 10px;
     text-align: right;
     padding-top: 15%;
@@ -1086,9 +1097,7 @@ section.timeline .post-content {
 }
 
 @media only screen and (max-width: 480px) {
-body{
-	font-size: 70%;
-}
+
 
 .countdown-timer .timer_box {
     min-width: 50px ;
