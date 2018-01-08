@@ -251,6 +251,10 @@ header {
 
 /*---Slider---*/
 
+#rev_slider_1{
+	z-index: -1;
+}
+
 .carousel,
 .item,
 .active {
