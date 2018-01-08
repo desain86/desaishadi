@@ -13,7 +13,7 @@
         jQuery('#rev_slider_1').show().revolution({
  
             /* options are 'auto', 'fullwidth' or 'fullscreen' */
-            sliderLayout: 'auto',
+            sliderLayout: 'fullscreen',
  
             /* basic navigation arrows and bullets */
             navigation: {
