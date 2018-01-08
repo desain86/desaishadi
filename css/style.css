@@ -983,16 +983,21 @@ footer .img-responsive{
 
 @media only screen and (max-width: 1199px) {}
 
-@media only screen and (max-width: 1024px) {
-.header_desc{
-	right: 50px;
+@media only screen and (max-width: 1020px) {
+.header_desc {
+    position: absolute;
+    width: 100%;
+    top: 15px;
+    text-align: center;
+    padding: 0px;
+    bottom: auto;
+    right: 0px;
+    
 }
 }
 
 @media only screen and (max-width: 991px) {
-html{
-	font-size: .73em;
-}
+
 .navbar-collapse{
 	overflow:auto !important;
 	height: auto !important;
@@ -1017,8 +1022,8 @@ section.timeline .post-content {
 /*--------------iPhone 6 plus landscape----------------*/
 
 @media only screen and (max-width: 767px) {
-body{
-	
+html{
+	font-size: .73em;
 }
 
 

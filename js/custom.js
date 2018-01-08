@@ -14,26 +14,32 @@
  
             /* options are 'auto', 'fullwidth' or 'fullscreen' */
             sliderLayout: 'fullscreen',
+
+            responsiveLevels: [1240, 1024, 778, 480],
+
+            sliderType: 'carousel',
  
-            /* basic navigation arrows and bullets */
-            navigation: {
+		    carousel: {
+		 
+		        maxVisibleItems: 5,
+		        space: -295,
+		        infinity: 'on',
+		        stretch: 'off',
+		 
+		        border_radius: '10px',
+		        horizontal_align: 'center',
+		 
+		        fadeout: 'on',
+		        vary_fade: 'on',
+		 
+		        vary_rotation: 'off',
+		        maxRotation: 0,
+		 
+		        vary_scale: 'off',
+		        minScale: 22
+		 
+		    },
  
-                arrows: {
-                    enable: true,
-                    style: 'hesperiden',
-                    hide_onleave: false
-                },
- 
-                bullets: {
-                    enable: true,
-                    style: 'hesperiden',
-                    hide_onleave: false,
-                    h_align: 'center',
-                    v_align: 'bottom',
-                    h_offset: 0,
-                    v_offset: 20,
-                    space: 5
-                }
-            }
+
         });
     });
