@@ -986,7 +986,11 @@ footer .img-responsive{
 
 @media (min-width: 1280px) {}
 
-@media only screen and (max-width: 1199px) {}
+@media only screen and (max-width: 1199px) {
+	.header_desc{
+		right: 7.5em;
+	}
+}
 
 @media only screen and (max-width: 1020px) {
 html{
