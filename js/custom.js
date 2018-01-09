@@ -15,14 +15,14 @@
             /* options are 'auto', 'fullwidth' or 'fullscreen' */
             sliderLayout: 'fullscreen',
 
-            responsiveLevels: [1240, 1024, 778, 480],
+            
 
             sliderType: 'carousel',
  
 		    carousel: {
 		 
 		        maxVisibleItems: 5,
-		        space: -295,
+		        space: -290,
 		        infinity: 'on',
 		        stretch: 'off',
 		 
